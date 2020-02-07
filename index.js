@@ -1,8 +1,8 @@
-const waitForElToDissapear = (elId) => {
-	let el = document.getElementById(elId);
+const waitForElToDissapear = (selector) => {
+	let el = document.querySelector(selector)[0];
 	return new Promise(resolve => {
 		let searchForEl = setInterval(() => {
-			el = document.getElementById(elId');
+			el = document.querySelector(selector)[0];
 			if (!el) {
 				clearInterval(searchForEl);
 				console.log('done');
